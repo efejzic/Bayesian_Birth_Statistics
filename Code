@@ -1,0 +1,74 @@
+-- Data
+
+> ncbs800 <- NCBIRTH800 %>% select(mage,premie,smoke)
+> view(ncbs800)
+> file_path <- "C:/Users/efejz/Documents/folder/ncbs800.xlsx"
+> write.xlsx(ncbs800,"device:/folder/ncbs800.xlsx")
+
+-- Q1
+
+> library(gmodels)
+> CrossTable(ncbs800$premie, ncbs800$smoke, chisq = FALSE, prop.chisq = FALSE)
+
+-- Cross table for frequency
+
+> cross_table <- table(ncbs800$premie, ncbs800$smoke)
+> view(cross_table)
+
+-- Q2(a(i) What is the probability that Age is less than 20 years
+
+> pnormGC(c(20), mean=26.91, sd=6.11, graph="TRUE")
+[1] 0.1290417
+
+-- Q2(a(ii) What is the probability that Age is more than 36 years 
+
+> pnormGC(c(36), region="above", mean=26.91, sd=6.11, graph="TRUE")
+[1] 0.06841171
+
+-- Q2 (a(iii) What is the probability that Age is between 20 years and 33 years
+
+> pnormGC(c(20, 33), region = "between", mean = 26.91, sd = 6.11, graph = TRUE)
+[1] 0.7115097
+
+-- Q2 (b(i) Generate a Boxplot, a Histogram and a distribution plot for mother’s age. 
+
+-- Boxplot
+
+> data <- rnorm(800, mean=26.91, sd=6.11)
+> boxplot(data, main="Boxplot for MAGE", ylab="MAGE")
+
+> x = (mydata$mage)
+> summary(x)
+
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+15.00   22.00   26.00   26.91   32.00   42.00 
+
+-- Histogram
+
+> library(readxl)
+> mydata <- read_excel("C:/Users/efejz/Documents/folder/ncbs800.xlsx")
+> hist(mydata$mage, main = "Histogram for MAGE", xlab = "MAGE", col = "lightblue", border = "black")
+> lines(hist_data$mids, hist_data$counts, col = "blue", lwd = 2)
+
+-- Distribution Plot
+
+> pnormGC(c(20.80, 33.02), region = "between", mean = 26.91, sd = 6.11, graph = TRUE)
+
+-- Q2(b(ii) What is the 68.26% range (lower bound and upper bound) for mother’s age? 
+
+> pnormGC(c(20.80, 33.02), mean=26.91, region="outside", sd=6.11, graph = TRUE)
+[1] 0.3173105
+
+-- Q2(b(iii)
+
+> pnormGC(c(14.69, 39.19), mean=26.91, region="outside", sd=6.11, graph = TRUE)
+[1] 0.04497526
+
+
+
+
+
+
+
+
+
