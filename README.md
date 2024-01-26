@@ -111,6 +111,8 @@ o	Mage is represented as a discrete random variable. The median of this dataset 
 
 **_Distribution Plot_**
 
+Mean = 26.91 ; SD = 6.11 ; Shaded area = 0.6827, or 68.27% of the lower and upper bound.
+
 ![image](https://github.com/efejzic/Bayesian_Birth_Statistics/assets/119814593/83c64561-7568-4c6d-b3d7-17c34667e1c8)
 
 o	In a normal distribution, 68% of data falls within the standard deviation of the mean. The mean falls in between 20.8 and 33.02.
