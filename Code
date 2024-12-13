@@ -53,6 +53,7 @@ Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
 -- Distribution Plot
 
 > pnormGC(c(20.80, 33.02), region = "between", mean = 26.91, sd = 6.11, graph = TRUE)
+[1] 0.6826895
 
 -- Q2(b(ii) What is the 68.26% range (lower bound and upper bound) for mother’s age? 
 
